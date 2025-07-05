@@ -1,0 +1,58 @@
+# 编译生成的二进制文件和可执行文件
+*.exe
+*.out
+*.app
+*.o
+*.a
+*.so
+*.dll
+*.lib
+*.dylib
+
+# 调试和构建目录
+build/
+bin/
+obj/
+Debug/
+Release/
+x64/
+x86/
+.vs/
+.vscode/
+
+# 依赖目录（如第三方库）
+deps/
+third_party/
+
+# IDE 特定文件（CLion, VS, VSCode 等）
+.idea/
+.vscode/
+*.sln
+*.vcxproj*
+*.vcxproj.filters
+*.user
+*.suo
+*.opensdf
+*.sdf
+
+# 编辑器临时文件
+*~
+*.swp
+*.swo
+
+# 日志文件
+*.log
+
+# 系统文件
+.DS_Store
+Thumbs.db
+
+# CMake 生成文件
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+
+# 自动生成的文档
+docs/html/
+docs/latex/
