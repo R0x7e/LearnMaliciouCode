@@ -2,6 +2,10 @@
 #include <windows.h>
 #include "pch.h"  // 这是Visual Studio生成的预编译头文件
 
+// 添加导出函数（必须声明为C风格）
+extern "C" __declspec(dllexport) void Runcalc() {
+    WinExec("calc.exe", SW_SHOW);
+}
 
 /*
  * DLL主入口点函数 - 操作系统在DLL加载、卸载等情况下自动调用
@@ -44,14 +48,14 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD ul_reason_for_call, LPVOID lpReserv
          * 注意: WinExec是较老的API，现代程序建议使用CreateProcess或ShellExecute
          * 但这里使用WinExec因为它简单直观
          */
-        WinExec("calc.exe", SW_SHOW);
+        //WinExec("notepad.exe", SW_SHOW);
 
         // 不需要处理其他情况，直接break
         break;
 
     case DLL_THREAD_ATTACH:   // 新线程创建时
         // 本例中不需要处理线程附加事件
-        WinExec("calc.exe", SW_SHOW);
+        WinExec("mspaint.exe", SW_SHOW);
         break;
 
     case DLL_THREAD_DETACH:   // 线程退出时
