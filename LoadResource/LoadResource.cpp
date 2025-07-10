@@ -31,13 +31,13 @@ BOOL LoadDllFromResource(int resourceId, LPCWSTR resourceType) {
     }
 
     //4.保存资源到指定文件
-    FILE* fp = NULL;
-    fopen_s(&fp, "DLL1.dll", "wb+");
+    FILE* fp = NULL;   //声名文件指针
+    fopen_s(&fp, "DLL1.dll", "wb+");  //以二进制写入模式创建
     if (fp == NULL) {
         return 4;
     }
-    fwrite(pResourceData,sizeof(char),dwSize,fp);
-    fclose(fp);
+    fwrite(pResourceData,sizeof(char),dwSize,fp);  // 将资源数据写入文件
+    fclose(fp);     // 确保数据写入磁盘并释放资源
     
     //5.加载DLL文件
     HMODULE hdll= LoadLibrary(L"DLL1.dll");
