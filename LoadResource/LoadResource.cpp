@@ -57,6 +57,7 @@ BOOL LoadDllFromResource(int resourceId, LPCWSTR resourceType) {
     return 0;
 }
 
+
 // 使用示例
 int main() {
     BOOL result=LoadDllFromResource(IDR_DLL1, L"DLL");
