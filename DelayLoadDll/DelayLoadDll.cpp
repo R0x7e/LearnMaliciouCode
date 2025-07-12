@@ -19,6 +19,7 @@
 //#pragma comment(lib, "Dll1.lib")
 
 
+
 // 正确声明延迟加载的函数
 /*
  * 声明要从DLL中延迟加载的函数
