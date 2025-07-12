@@ -16,6 +16,7 @@ int main()
         return 1;
     }
 
+
     // 检查是否已经存在该互斥体（即程序已经在运行）
     if (GetLastError() == ERROR_ALREADY_EXISTS)
         //GetLastError 是 Windows API 中的一个重要函数，用于获取调用线程的最后错误代码值。
